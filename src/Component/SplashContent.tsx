@@ -12,7 +12,9 @@ function SplashContent() {
         <div className="modal-window">
           <p>不適切なコメントを見つけて、報告しよう！</p>
           <p>ヒント: 不適切なコメントは {targetCount} 個あるよ！</p>
-          <button onClick={() => setShow(false)}>close</button>
+          <button onClick={() => setShow(false)} className="close-button">
+            とじる
+          </button>
         </div>
       </div>
     );

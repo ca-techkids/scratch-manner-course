@@ -23,11 +23,22 @@ export function AnswerResult(props: AnswerResultType) {
     return (
       <div className="overlay">
         <div className="modal-window">
-          {result}
-          <button onClick={() => {
-            props.closeHandler();
-            props.setShowAnswer(false);
-            }}>close</button>
+          <div className="explanation-container">
+            {result}
+            <img
+              src={props.explanationImagePath}
+              className="explanation-slide"
+            />
+            <button
+              onClick={() => {
+                props.closeHandler();
+                props.setShowAnswer(false);
+              }}
+              className="close-button"
+            >
+              とじる
+            </button>
+          </div>
         </div>
       </div>
     );

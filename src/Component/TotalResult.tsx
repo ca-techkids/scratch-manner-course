@@ -15,7 +15,7 @@ export function TotalResult(props: TotalResultType) {
         <div className="modal-window">
           <p>正解した数: {props.correctCount}</p>
           <p>間違えた数: {props.wrongCount}</p>
-          <button onClick={() => setShow(false)}>close</button>
+          <button onClick={() => setShow(false)} className="close-button">とじる</button>
         </div>
       </div>
     );

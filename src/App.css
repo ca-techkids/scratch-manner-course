@@ -211,7 +211,7 @@ header {
   margin: 1rem;
 }
 
-.result-close-button {
+.close-button {
   font-size: x-large;
   color: #007bff;
   background-color: white;
@@ -223,7 +223,7 @@ header {
   transition-duration: .1s;
 }
 
-.result-close-button:hover {
+.close-button:hover {
   font-size: x-large;
   color: white;
   background-color: #007bff;
