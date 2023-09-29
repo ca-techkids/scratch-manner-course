@@ -11,6 +11,7 @@ type CommentTypeWithAction = {
 function CommentToWork(props: CommentTypeWithAction) {
   const [showAnswer, setShowAnswer] = useState(false);
   const [alreadyAnswered, setAnswered] = useState(false);
+  const [reportButtonVisiblity, setButtonVisiblity] = useState(false);
 
   let reportButton;
   if (alreadyAnswered) {
@@ -35,7 +36,12 @@ function CommentToWork(props: CommentTypeWithAction) {
   }
 
   return (
-    <li className="comment" key={props.comment.date.getTime()}>
+    <li
+      className="comment"
+      key={props.comment.date.getTime()}
+      onMouseEnter={() => setButtonVisiblity(true)}
+      onMouseLeave={() => setButtonVisiblity(false)}
+    >
       <div className="comment-left icon">
         <img src={props.comment.iconUrl}></img>
       </div>
@@ -49,7 +55,7 @@ function CommentToWork(props: CommentTypeWithAction) {
         </div>
       </div>
       <AnswerResult
-        explanationImagePath=""
+        explanationImagePath={props.comment.explanationSlideUrl}
         isAgainstManners={props.comment.isAgainstManners}
         isShow={showAnswer}
         setShowAnswer={setShowAnswer}

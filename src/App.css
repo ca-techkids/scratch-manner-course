@@ -169,4 +169,40 @@ header {
   width: 50%;
   padding: 1em;
   background: #fff;
+  border-radius: 1rem;
+}
+
+.explanation-container {
+  font-size: x-large;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.explanation-slide {
+  max-width: 80%;
+  margin: 1rem;
+}
+
+.result-close-button {
+  font-size: x-large;
+  color: #007bff;
+  background-color: white;
+  border: 1px solid;
+  border-radius: .5rem;
+  border-color: #007bff;
+  padding: .5rem;
+  margin: .5rem;
+  transition-duration: .1s;
+}
+
+.result-close-button:hover {
+  font-size: x-large;
+  color: white;
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: .5rem;
+  padding: .5rem;
+  margin: .5rem;
 }
