@@ -11,19 +11,24 @@ type CommentTypeWithAction = {
 function CommentToWork(props: CommentTypeWithAction) {
   const [showAnswer, setShowAnswer] = useState(false);
   const [alreadyAnswered, setAnswered] = useState(false);
-  const [reportButtonVisiblity, setButtonVisiblity] = useState(false);
+  const [reportButtonVisible, setButtonVisiblity] = useState(false);
+
+  let reportButtonClass = "report-button";
+  if (!reportButtonVisible) reportButtonClass += " hidden";
+
+  let dateString = (new Date()).getDate() - props.comment.date.getDate() + "日前";
 
   let reportButton;
   if (alreadyAnswered) {
     reportButton = (
-      <button className="report-button" disabled>
+      <button className={reportButtonClass} disabled>
         報告済み
       </button>
     );
   } else {
     reportButton = (
       <button
-        className="report-button"
+        className={reportButtonClass + " reportable"}
         onClick={() => {
           props.answerHandler(props.comment);
           setAnswered(true);
@@ -47,11 +52,12 @@ function CommentToWork(props: CommentTypeWithAction) {
       </div>
       <div className="comment-right">
         <div className="comment-header">
-          <div className="comment-header-right">{reportButton}</div>
+          <p className="comment-username">{props.comment.author}</p>
+          {reportButton}
         </div>
-        <div className="comment-body">
-          <p className="comment-text">{props.comment.body}</p>
-          <p className="comment-date">{props.comment.date.toDateString()}</p>
+        <div className="comment-bubble">
+          <p className="comment-body">{props.comment.body}</p>
+          <p className="comment-date">{dateString}</p>
         </div>
       </div>
       <AnswerResult

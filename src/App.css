@@ -22,6 +22,10 @@ h1, h3 {
   margin: 0;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 .center {
   display: flex;
   justify-content: center;
@@ -116,8 +120,6 @@ header {
 
 .comment-container {
   width: 750px;
-  min-width: 65%;
-  max-width: 100%;
   margin: 0 auto 0 auto;
 }
 
@@ -129,7 +131,7 @@ header {
 }
 
 .comment-left {
-  margin: 1rem 1rem 0 0;
+  margin: 0;
 }
 
 .comment-right {
@@ -138,17 +140,41 @@ header {
 
 .comment-header {
   display: flex;
-  justify-content: end;
-  margin-bottom: .5rem;
+  justify-content: space-between;
 }
 
-.comment-body {
+.comment-username {
+  margin: .5rem 1rem;
+}
+
+.comment-bubble {
   width: calc(100% - 0.5rem);
   background-color: white;
   border: solid 2px;
   border-radius: 10px;
   border-color: grey;
-  padding: .5rem;
+  margin: .5rem;
+}
+
+.comment-body {
+  margin: 1rem;
+
+}
+
+.comment-date {
+  color: grey;
+  margin: 1rem;
+}
+
+.report-button {
+  color: grey;
+  background-color: transparent;
+  border: none;
+}
+
+.reportable:hover {
+  text-decoration-line: underline;
+  cursor: pointer;
 }
 
 .overlay {
