@@ -6,7 +6,7 @@ type CommentTypeWithAction = {
   comment: CommentType;
   answerHandler: (c: CommentType) => void;
   closeHandler: () => void;
-}
+};
 
 function CommentToWork(props: CommentTypeWithAction) {
   const [showAnswer, setShowAnswer] = useState(false);
@@ -35,16 +35,18 @@ function CommentToWork(props: CommentTypeWithAction) {
   }
 
   return (
-    <li className="comment-container" key={props.comment.date.getTime()}>
-      <div className="comment-header">
-        <div className="comment-header-left">
-          <img src={props.comment.iconUrl}></img>
+    <li className="comment" key={props.comment.date.getTime()}>
+      <div className="comment-left icon">
+        <img src={props.comment.iconUrl}></img>
+      </div>
+      <div className="comment-right">
+        <div className="comment-header">
+          <div className="comment-header-right">{reportButton}</div>
+        </div>
+        <div className="comment-body">
+          <p className="comment-text">{props.comment.body}</p>
           <p className="comment-date">{props.comment.date.toDateString()}</p>
         </div>
-        <div className="comment-header-right">{reportButton}</div>
-      </div>
-      <div className="comment-main-container">
-        <p className="comment-text">{props.comment.body}</p>
       </div>
       <AnswerResult
         explanationImagePath=""

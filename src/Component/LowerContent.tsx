@@ -53,9 +53,9 @@ export function LowerContent() {
         wrongCount={wrongCount}
         enabled={isShowTotalResult}
       />
-      <div className="inner-content center">
-        <h3>コメント</h3>
-        <ul className="comment-container">{commentAsList}</ul>
+      <div className="comment-container flex-column">
+        <h2>コメント</h2>
+        <ul className="comments">{commentAsList}</ul>
       </div>
     </div>
   );
