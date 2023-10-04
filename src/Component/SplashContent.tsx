@@ -10,11 +10,14 @@ function SplashContent() {
     return (
       <div className="overlay">
         <div className="modal-window">
-          <p>不適切なコメントを見つけて、報告しよう！</p>
-          <p>ヒント: 不適切なコメントは {targetCount} 個あるよ！</p>
-          <button onClick={() => setShow(false)} className="close-button">
-            とじる
-          </button>
+          <div className="splash-window flex-column center">
+            <p>不適切なコメントを見つけて、報告しよう！</p>
+            <img src="./img/report_tutorial.gif" ></img>
+            <p>ヒント: 不適切なコメントは {targetCount} 個あるよ！</p>
+            <button onClick={() => setShow(false)} className="close-button">
+              とじる
+            </button>
+          </div>
         </div>
       </div>
     );

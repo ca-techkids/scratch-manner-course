@@ -202,6 +202,10 @@ header {
   border-radius: 1rem;
 }
 
+.splash-window {
+  text-align: center;
+}
+
 .explanation-container {
   font-size: x-large;
   font-weight: bold;
