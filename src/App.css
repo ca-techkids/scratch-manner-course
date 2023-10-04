@@ -177,6 +177,10 @@ header {
   cursor: pointer;
 }
 
+.replies {
+  margin-left: 50px;
+}
+
 .overlay {
   position: fixed;
   top: 0;

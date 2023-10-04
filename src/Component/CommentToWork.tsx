@@ -40,26 +40,45 @@ function CommentToWork(props: CommentTypeWithAction) {
     );
   }
 
+  let replies;
+  if (props.comment.reply) {
+    replies = (
+      <li>
+        {props.comment.reply.map((r) => {
+          return (
+            <CommentToWork
+              answerHandler={props.answerHandler}
+              closeHandler={props.closeHandler}
+              comment={r}
+            />
+          );
+        })}
+      </li>
+    );
+  }
+
   return (
-    <li
-      className="comment"
-      key={props.comment.date.getTime()}
-      onMouseEnter={() => setButtonVisiblity(true)}
-      onMouseLeave={() => setButtonVisiblity(false)}
-    >
-      <div className="comment-left icon">
-        <img src={props.comment.iconUrl}></img>
-      </div>
-      <div className="comment-right">
-        <div className="comment-header">
-          <p className="comment-username">{props.comment.author}</p>
-          {reportButton}
+    <li key={props.comment.date.getTime()}>
+      <div
+        className="comment"
+        onMouseEnter={() => setButtonVisiblity(true)}
+        onMouseLeave={() => setButtonVisiblity(false)}
+      >
+        <div className="comment-left icon">
+          <img src={props.comment.iconUrl}></img>
         </div>
-        <div className="comment-bubble">
-          <p className="comment-body">{props.comment.body}</p>
-          <p className="comment-date">{dateString}</p>
+        <div className="comment-right">
+          <div className="comment-header">
+            <p className="comment-username">{props.comment.author}</p>
+            {reportButton}
+          </div>
+          <div className="comment-bubble">
+            <p className="comment-body">{props.comment.body}</p>
+            <p className="comment-date">{dateString}</p>
+          </div>
         </div>
       </div>
+      <ul className="replies">{replies}</ul>
       <AnswerResult
         explanationImagePath={props.comment.explanationSlideUrl}
         isAgainstManners={props.comment.isAgainstManners}

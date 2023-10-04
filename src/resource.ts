@@ -5,7 +5,7 @@ export type CommentType = {
   explanationSlideUrl: string;
   date: Date;
   isAgainstManners: boolean;
-  reply?: CommentType;
+  reply?: CommentType[];
 };
 
 export function getComments(): CommentType[] {
@@ -49,14 +49,34 @@ export function getComments(): CommentType[] {
       explanationSlideUrl: "./img/slide.png",
       date: new Date("2023-08-05"),
       isAgainstManners: false,
-      reply: {
-        body: "適切な返信1",
-        author: "6thName",
-        iconUrl: "./img/scratch_manner_course_icon_50px.png",
-        explanationSlideUrl: "./img/slide.png",
-        date: new Date("2023-08-10"),
-        isAgainstManners: false,
-      },
+      reply: [
+        {
+          body: "適切な返信1",
+          author: "6thName",
+          iconUrl: "./img/scratch_manner_course_icon_50px.png",
+          explanationSlideUrl: "./img/slide.png",
+          date: new Date("2023-08-10"),
+          isAgainstManners: false,
+          reply: [
+            {
+              body: "不適切な返信1",
+              author: "7thName",
+              iconUrl: "./img/scratch_manner_course_icon_50px.png",
+              explanationSlideUrl: "./img/slide.png",
+              date: new Date("2023-08-10"),
+              isAgainstManners: true,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      body: "不適切なとてもすごく長いすごい長い折り返しが入る不適切なとてもすごく長いすごい長い折り返しが入るコメント3",
+      author: "8thName",
+      iconUrl: "./img/scratch_manner_course_icon_50px.png",
+      explanationSlideUrl: "./img/slide.png",
+      date: new Date("2023-08-04"),
+      isAgainstManners: true,
     },
   ];
 }
