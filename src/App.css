@@ -31,6 +31,15 @@ h1, h3 {
   justify-content: center;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.bold {
+  font-size: larger;
+  font-weight: bold;
+}
+
 .flex-row {
   display: flex;
   justify-self: center;
@@ -239,4 +248,8 @@ header {
   border-radius: .5rem;
   padding: .5rem;
   margin: .5rem;
+}
+
+.access-password {
+  margin: 2rem;
 }

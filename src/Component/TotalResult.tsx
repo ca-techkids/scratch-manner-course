@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export type TotalResultType = {
   questionCount: number;
   correctCount: number;
@@ -8,17 +6,18 @@ export type TotalResultType = {
 };
 
 export function TotalResult(props: TotalResultType) {
-  const [isShow, setShow] = useState(true);
-  if (props.enabled && isShow) {
-    return (
-      <div className="overlay">
-        <div className="modal-window">
-          <p>正解した数: {props.correctCount}</p>
-          <p>間違えた数: {props.wrongCount}</p>
-          <button onClick={() => setShow(false)} className="close-button">とじる</button>
-        </div>
+  if (!props.enabled) return null;
+  return (
+    <div className="overlay">
+      <div className="modal-window text-center">
+        <p>正解した数: {props.correctCount}</p>
+        <p>間違えた数: {props.wrongCount}</p>
+        <div className="access-password">
+          <p>このパスワードを使って、教科書にアクセスしよう！</p>
+          <p className="bold">Password</p>
+          <a href="" target="_blank">アクセス！</a>
+          </div>
       </div>
-    );
-  }
-  return null;
+    </div>
+  );
 }
