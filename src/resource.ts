@@ -9,6 +9,16 @@ export type CommentType = {
   reply?: CommentType[];
 };
 
+export function countTarget(comments: CommentType[]) {
+  let targetCount = 0;
+  const countTargetRecursively = (comment: CommentType) => {
+    if (comment.isAgainstManners) targetCount += 1;
+    if (comment.reply) comment.reply.forEach((r) => countTargetRecursively(r));
+  };
+  comments.forEach((c) => countTargetRecursively(c));
+  return targetCount;
+}
+
 export function getComments(): CommentType[] {
   return [
     {

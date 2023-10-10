@@ -21,7 +21,7 @@ export function LowerContent() {
   }, [correctCount]);
 
   const comments = resource.getComments();
-  const targetCount = comments.filter((c) => c.isAgainstManners).length;
+  const targetCount = resource.countTarget(comments);
   const commentAsList = comments.map((c) => {
     return (
       <CommentToWork

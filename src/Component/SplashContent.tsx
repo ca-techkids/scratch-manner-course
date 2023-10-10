@@ -3,7 +3,7 @@ import * as resource from "../resource";
 
 function SplashContent() {
   const comments = resource.getComments();
-  const targetCount = comments.filter((c) => c.isAgainstManners).length;
+  const targetCount = resource.countTarget(comments);
 
   const [isShow, setShow] = useState(true);
   if (isShow) {
