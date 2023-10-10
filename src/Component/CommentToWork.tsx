@@ -80,7 +80,7 @@ function CommentToWork(props: CommentTypeWithAction) {
       </div>
       <ul className="replies">{replies}</ul>
       <AnswerResult
-        explanationImagePath={props.comment.explanationSlideUrl}
+        explanationUrl={props.comment.explanationPage}
         isAgainstManners={props.comment.isAgainstManners}
         isShow={showAnswer}
         setShowAnswer={setShowAnswer}

@@ -1,5 +1,7 @@
+import Iframe from "react-iframe";
+
 export type AnswerResultType = {
-  explanationImagePath: string;
+  explanationUrl: string;
   isAgainstManners: boolean;
   isShow: boolean;
   setShowAnswer: React.Dispatch<React.SetStateAction<boolean>>;
@@ -14,32 +16,49 @@ export type AnswerResultType = {
 export function AnswerResult(props: AnswerResultType) {
   let result;
   if (props.isAgainstManners) {
-    result = <p>正解！</p>;
+    result = (
+      <div className="modal-window-result flex-column center">
+        <p className="result-text">正解！</p>
+        <p className="result-hint">説明の動画を見てみよう！</p>
+        <Iframe
+          url={props.explanationUrl}
+          className="explanation"
+          width="100%"
+          height="100%"
+        />
+        <button
+          onClick={() => {
+            props.closeHandler();
+            props.setShowAnswer(false);
+          }}
+          className="close-button"
+        >
+          とじる
+        </button>
+      </div>
+    );
   } else {
-    result = <p>不正解...</p>;
+    result = (
+      <div className="modal-window flex-column center">
+        <p className="bold xlarge">不正解...</p>
+        <p>ほかにも良くないコメントがないか探してみよう！</p>
+        <button
+          onClick={() => {
+            props.closeHandler();
+            props.setShowAnswer(false);
+          }}
+          className="close-button"
+        >
+          とじる
+        </button>
+      </div>
+    );
   }
 
   if (props.isShow) {
     return (
       <div className="overlay">
-        <div className="modal-window">
-          <div className="explanation-container">
-            {result}
-            <img
-              src={props.explanationImagePath}
-              className="explanation-slide"
-            />
-            <button
-              onClick={() => {
-                props.closeHandler();
-                props.setShowAnswer(false);
-              }}
-              className="close-button"
-            >
-              とじる
-            </button>
-          </div>
-        </div>
+        {result}
       </div>
     );
   }
