@@ -18,8 +18,8 @@ export function Header() {
         <div className="header-button">
           <p>Scratchについて</p>
         </div>
-        <div className="header-button">
-          <p>検索</p>
+        <div className="search-box">
+          <p className="search-text">検索</p>
         </div>
         <div className="header-button">
           <p>Scratchに参加しよう</p>
