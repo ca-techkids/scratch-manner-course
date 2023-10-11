@@ -4,6 +4,7 @@ import { CommentType } from "../resource";
 
 type CommentTypeWithAction = {
   comment: CommentType;
+  remainNumber: number;
   answerHandler: (c: CommentType) => void;
   closeHandler: () => void;
 };
@@ -47,6 +48,7 @@ function CommentToWork(props: CommentTypeWithAction) {
         {props.comment.reply.map((r) => {
           return (
             <CommentToWork
+              remainNumber={props.remainNumber}
               answerHandler={props.answerHandler}
               closeHandler={props.closeHandler}
               comment={r}
@@ -80,6 +82,7 @@ function CommentToWork(props: CommentTypeWithAction) {
       </div>
       <ul className="replies">{replies}</ul>
       <AnswerResult
+        remainNumber={props.remainNumber}
         explanationUrl={props.comment.explanationPage}
         isAgainstManners={props.comment.isAgainstManners}
         isShow={showAnswer}

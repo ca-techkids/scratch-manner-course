@@ -26,6 +26,7 @@ export function LowerContent() {
     return (
       <CommentToWork
         comment={c}
+        remainNumber={targetCount-correctCount}
         answerHandler={(c) => {
           if (c.isAgainstManners) {
             setCorrectCount(correctCount + 1);

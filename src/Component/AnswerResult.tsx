@@ -2,6 +2,7 @@ import Iframe from "react-iframe";
 
 export type AnswerResultType = {
   explanationUrl: string;
+  remainNumber: number;
   isAgainstManners: boolean;
   isShow: boolean;
   setShowAnswer: React.Dispatch<React.SetStateAction<boolean>>;
@@ -19,6 +20,7 @@ export function AnswerResult(props: AnswerResultType) {
     result = (
       <div className="modal-window-result flex-column center">
         <p className="result-text">正解！</p>
+        <p className="result-hint">あと {props.remainNumber} 個！</p>
         <p className="result-hint">解説動画を見てみよう！終わったら「とじる」ボタンをクリックしよう</p>
         <Iframe
           url={props.explanationUrl}
