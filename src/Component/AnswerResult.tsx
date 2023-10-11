@@ -19,7 +19,7 @@ export function AnswerResult(props: AnswerResultType) {
     result = (
       <div className="modal-window-result flex-column center">
         <p className="result-text">正解！</p>
-        <p className="result-hint">説明の動画を見てみよう！</p>
+        <p className="result-hint">解説動画を見てみよう！終わったら「とじる」ボタンをクリックしよう</p>
         <Iframe
           url={props.explanationUrl}
           className="explanation"
