@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/scratch-manner-course/static/css/main.e8e3d1b3.css",
-    "main.js": "/scratch-manner-course/static/js/main.9ce69300.js",
+    "main.js": "/scratch-manner-course/static/js/main.c707dfd1.js",
     "static/js/787.5b8e98fd.chunk.js": "/scratch-manner-course/static/js/787.5b8e98fd.chunk.js",
     "index.html": "/scratch-manner-course/index.html",
     "main.e8e3d1b3.css.map": "/scratch-manner-course/static/css/main.e8e3d1b3.css.map",
-    "main.9ce69300.js.map": "/scratch-manner-course/static/js/main.9ce69300.js.map",
+    "main.c707dfd1.js.map": "/scratch-manner-course/static/js/main.c707dfd1.js.map",
     "787.5b8e98fd.chunk.js.map": "/scratch-manner-course/static/js/787.5b8e98fd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e8e3d1b3.css",
-    "static/js/main.9ce69300.js"
+    "static/js/main.c707dfd1.js"
   ]
 }
