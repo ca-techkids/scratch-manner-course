@@ -8,7 +8,7 @@ function UpperContent() {
       <div className="inner-content center">
         <div className="game-container">
           <div>
-            <h1 className="title">Scratchマナー講習</h1>
+            <h1 className="title">ネットリテラシー講座</h1>
           </div>
           <div className="center">
             <div className="game-window">
