@@ -4,6 +4,7 @@ export type AnswerResultType = {
   explanationUrl: string;
   remainNumber: number;
   isAgainstManners: boolean;
+  maybeAgainst?: boolean;
   isShow: boolean;
   setShowAnswer: React.Dispatch<React.SetStateAction<boolean>>;
   closeHandler: () => void;
@@ -16,7 +17,25 @@ export type AnswerResultType = {
  */
 export function AnswerResult(props: AnswerResultType) {
   let result;
-  if (props.isAgainstManners) {
+  if (props.isAgainstManners && props.maybeAgainst) {
+    result = (
+      <div className="modal-window flex-column center">
+        <p className="result-text">一部正解！</p>
+        <p className="result-hint">あと {props.remainNumber} 個！</p>
+        <p className="result-hint">このコメントはどこがよくないのか、メンターさんに話してから次に進もう！</p>
+        <button
+          onClick={() => {
+            props.closeHandler();
+            props.setShowAnswer(false);
+          }}
+          className="close-button"
+        >
+          とじる
+        </button>
+      </div>
+    );
+
+  } else if (props.isAgainstManners) {
     result = (
       <div className="modal-window-result flex-column center">
         <p className="result-text">正解！</p>

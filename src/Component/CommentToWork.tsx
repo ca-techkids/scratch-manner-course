@@ -85,6 +85,7 @@ function CommentToWork(props: CommentTypeWithAction) {
         remainNumber={props.remainNumber}
         explanationUrl={props.comment.explanationPage}
         isAgainstManners={props.comment.isAgainstManners}
+        maybeAgainst={props.comment.maybeAgainst}
         isShow={showAnswer}
         setShowAnswer={setShowAnswer}
         closeHandler={props.closeHandler}
