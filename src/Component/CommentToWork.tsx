@@ -17,7 +17,7 @@ function CommentToWork(props: CommentTypeWithAction) {
   let reportButtonClass = "report-button";
   if (!reportButtonVisible) reportButtonClass += " hidden";
 
-  let dateString = (new Date()).getDate() - props.comment.date.getDate() + "日前";
+  let dateString = new Date().getDate() - props.comment.date.getDate() + "日前";
 
   let reportButton;
   if (alreadyAnswered) {
@@ -43,24 +43,20 @@ function CommentToWork(props: CommentTypeWithAction) {
 
   let replies;
   if (props.comment.reply) {
-    replies = (
-      <li>
-        {props.comment.reply.map((r) => {
-          return (
-            <CommentToWork
-              remainNumber={props.remainNumber}
-              answerHandler={props.answerHandler}
-              closeHandler={props.closeHandler}
-              comment={r}
-            />
-          );
-        })}
-      </li>
-    );
+    replies = props.comment.reply.map((r) => {
+      return (
+        <CommentToWork
+          remainNumber={props.remainNumber}
+          answerHandler={props.answerHandler}
+          closeHandler={props.closeHandler}
+          comment={r}
+        />
+      );
+    });
   }
 
   return (
-    <li key={props.comment.date.getTime()}>
+    <li key={props.comment.body}>
       <div
         className="comment"
         onMouseEnter={() => setButtonVisiblity(true)}
