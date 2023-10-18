@@ -23,7 +23,7 @@ export function AnswerResult(props: AnswerResultType) {
         <p className="result-text">正解！</p>
         <p className="result-hint">あと {props.remainNumber} 個！</p>
         <p className="result-hint">
-          解説動画を見てみよう！終わったら「とじる」ボタンをクリックしよう
+          メンターさんと話せたら「とじる」ボタンをクリックしよう
         </p>
         <img src="./img/slide_result_1.png" className="slide" />
         <button
