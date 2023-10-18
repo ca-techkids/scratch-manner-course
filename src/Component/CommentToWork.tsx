@@ -83,7 +83,8 @@ function CommentToWork(props: CommentTypeWithAction) {
       <ul className="replies">{replies}</ul>
       <AnswerResult
         remainNumber={props.remainNumber}
-        explanationUrl={props.comment.explanationPage}
+        explanationPageUrl={props.comment.explanationPage}
+        explanationSlideUrl={props.comment.explanationSlideUrl}
         isAgainstManners={props.comment.isAgainstManners}
         isShow={showAnswer}
         setShowAnswer={setShowAnswer}
