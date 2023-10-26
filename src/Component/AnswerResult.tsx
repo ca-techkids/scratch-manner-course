@@ -4,6 +4,7 @@ export type AnswerResultType = {
   explanationPageUrl: string;
   explanationSlideUrl?: string;
   remainNumber: number;
+  wrongCount: number;
   isAgainstManners: boolean;
   isShow: boolean;
   setShowAnswer: React.Dispatch<React.SetStateAction<boolean>>;
@@ -66,6 +67,7 @@ export function AnswerResult(props: AnswerResultType) {
     result = (
       <div className="modal-window flex-column center">
         <p className="bold xlarge">不正解...</p>
+        <p className="result-hint">お手つき: {props.wrongCount} 回目</p>
         <p>ほかにも良くないコメントがないか探してみよう！</p>
         <button
           onClick={() => {

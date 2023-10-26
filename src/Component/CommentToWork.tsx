@@ -5,6 +5,7 @@ import { CommentType } from "../resource";
 type CommentTypeWithAction = {
   comment: CommentType;
   remainNumber: number;
+  wrongCount: number;
   answerHandler: (c: CommentType) => void;
   closeHandler: () => void;
 };
@@ -47,6 +48,7 @@ function CommentToWork(props: CommentTypeWithAction) {
       return (
         <CommentToWork
           remainNumber={props.remainNumber}
+          wrongCount={props.wrongCount}
           answerHandler={props.answerHandler}
           closeHandler={props.closeHandler}
           comment={r}
@@ -79,6 +81,7 @@ function CommentToWork(props: CommentTypeWithAction) {
       <ul className="replies">{replies}</ul>
       <AnswerResult
         remainNumber={props.remainNumber}
+        wrongCount={props.wrongCount}
         explanationPageUrl={props.comment.explanationPage}
         explanationSlideUrl={props.comment.explanationSlideUrl}
         isAgainstManners={props.comment.isAgainstManners}

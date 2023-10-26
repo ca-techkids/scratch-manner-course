@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import * as resource from "../resource";
 import { CommentToWork } from "./CommentToWork";
 import { TotalResult } from "./TotalResult";
+import { Retry } from "./Retry";
 
 /**
  * 画面下部のコメント欄を描画する
@@ -12,13 +13,17 @@ export function LowerContent() {
   const [wrongCount, setWrongCount] = useState(0);
   const [isAnsweredAllTarget, setAnsweredAllTarget] = useState(false);
   const [isShowTotalResult, setShowTotalResult] = useState(false);
+  const [isShowRetry, setShowRetry] = useState(false);
 
   useEffect(() => {
     if (correctCount === targetCount) {
       setAnsweredAllTarget(true);
       console.log("all answered.");
     }
-  }, [correctCount]);
+    if (wrongCount === 3) {
+      setShowRetry(true);
+    }
+  }, [correctCount, wrongCount]);
 
   const comments = resource.getComments();
   const targetCount = resource.countTarget(comments);
@@ -26,7 +31,8 @@ export function LowerContent() {
     return (
       <CommentToWork
         comment={c}
-        remainNumber={targetCount-correctCount}
+        remainNumber={targetCount - correctCount}
+        wrongCount={wrongCount}
         answerHandler={(c) => {
           if (c.isAgainstManners) {
             setCorrectCount(correctCount + 1);
@@ -54,6 +60,7 @@ export function LowerContent() {
         wrongCount={wrongCount}
         enabled={isShowTotalResult}
       />
+      <Retry enabled={isShowRetry} />
       <div className="comment-container flex-column">
         <h2>コメント</h2>
         <ul className="comments">{commentAsList}</ul>
