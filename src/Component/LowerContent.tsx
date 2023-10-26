@@ -10,12 +10,12 @@ import { TotalResult } from "./TotalResult";
 export function LowerContent() {
   const [correctCount, setCorrectCount] = useState(0);
   const [wrongCount, setWrongCount] = useState(0);
-  const [isAnsweredAllTarget, setAnswererAllTarget] = useState(false);
+  const [isAnsweredAllTarget, setAnsweredAllTarget] = useState(false);
   const [isShowTotalResult, setShowTotalResult] = useState(false);
 
   useEffect(() => {
     if (correctCount === targetCount) {
-      setAnswererAllTarget(true);
+      setAnsweredAllTarget(true);
       console.log("all answered.");
     }
   }, [correctCount]);
