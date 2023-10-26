@@ -117,7 +117,7 @@ export function getComments(): CommentType[] {
       iconUrl: "./img/scratch_manner_course_icon_50px.png",
       explanationPage: "https://learning.techkidsschool.jp/#/materials/6524ee29b6270c5442d0a28a?0=%E3%83%8D%E3%83%83%E3%83%88%E3%83%AA%E3%83%86%E3%83%A9%E3%82%B7%E3%83%BC%E8%AC%9B%E5%BA%A7%EF%BC%88%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E7%B7%A8%EF%BC%89&1=%E7%9B%B8%E6%89%8B%E3%81%AE%E6%B0%97%E6%8C%81%E3%81%A1%E3%82%92%E8%80%83%E3%81%88%E3%82%8B",
       date: new Date("2023-08-04"),
-      isAgainstManners: true,
+      isAgainstManners: false,
       reply: [
         {
           body: "いや海賊をテーマにリミックスした方がいい",
@@ -125,7 +125,7 @@ export function getComments(): CommentType[] {
           iconUrl: "./img/scratch_manner_course_icon_50px.png",
           explanationPage: "https://learning.techkidsschool.jp/#/materials/6524ee29b6270c5442d0a28a?0=%E3%83%8D%E3%83%83%E3%83%88%E3%83%AA%E3%83%86%E3%83%A9%E3%82%B7%E3%83%BC%E8%AC%9B%E5%BA%A7%EF%BC%88%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E7%B7%A8%EF%BC%89&1=%E7%9B%B8%E6%89%8B%E3%81%AE%E6%B0%97%E6%8C%81%E3%81%A1%E3%82%92%E8%80%83%E3%81%88%E3%82%8B",
           date: new Date("2023-08-04"),
-          isAgainstManners: true,
+          isAgainstManners: false,
           reply: [
             {
               body: "海賊テーマだなんて、子供っぽすぎ。年上の意見を聞け。",
