@@ -35,7 +35,7 @@ function CommentToWork(props: CommentTypeWithAction) {
           setShowAnswer(true);
         }}
       >
-        不適切なコメントとして報告
+        良くないコメントとして報告
       </button>
     );
   }

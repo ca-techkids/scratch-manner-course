@@ -22,7 +22,7 @@ export function countTarget(comments: CommentType[]) {
 export function getComments(): CommentType[] {
   return [
     {
-      body: "宇宙を舞台にした方が面白いから、作り直したら？",
+      body: "宇宙をテーマにした方が面白いから、作り直したら？",
       author: "QuantumCoder2023",
       iconUrl: "./img/scratch_manner_course_icon_50px.png",
       explanationSlideUrl: "./img/slide_result_1.png",
@@ -40,7 +40,7 @@ export function getComments(): CommentType[] {
       isAgainstManners: false,
     },
     {
-      body: "このゲーム簡単だよね。誰でもできる。",
+      body: "このゲームかんたんだよね。誰でもできる。",
       author: "StarlightExplorer",
       iconUrl: "./img/scratch_manner_course_icon_50px.png",
       explanationSlideUrl: "./img/slide_result_1.png",
@@ -84,7 +84,7 @@ export function getComments(): CommentType[] {
       isAgainstManners: false,
     },
     {
-      body: "僕のお母さんは渋谷スクランブルスクエアで働いているんだ！",
+      body: "ぼくのお母さんは渋谷スクランブルスクエアではたらいているんだ！",
       author: "PixelPanda2023",
       iconUrl: "./img/scratch_manner_course_icon_50px.png",
       explanationPage:
@@ -93,7 +93,7 @@ export function getComments(): CommentType[] {
       isAgainstManners: true,
     },
     {
-      body: "僕の電話番号は123-4567-8901だよ！",
+      body: "ぼくの電話番号は123-4567-8901だよ！",
       author: "PixelPanda2023",
       iconUrl: "./img/scratch_manner_course_icon_50px.png",
       explanationPage:
@@ -128,7 +128,7 @@ export function getComments(): CommentType[] {
       isAgainstManners: false,
       reply: [
         {
-          body: "いや海賊をテーマにリミックスした方がいい",
+          body: "いやかいぞくをテーマにリミックスした方がいい",
           author: "CodeDragonfly",
           iconUrl: "./img/scratch_manner_course_icon_50px.png",
           explanationPage:
@@ -137,7 +137,7 @@ export function getComments(): CommentType[] {
           isAgainstManners: false,
           reply: [
             {
-              body: "海賊テーマだなんて、子供っぽすぎ。年上の意見を聞け。",
+              body: "かいぞくがテーマだなんて、子供っぽすぎ。年上の意見を聞け。",
               author: "CyberneticCheetah",
               iconUrl: "./img/scratch_manner_course_icon_50px.png",
               explanationPage:
@@ -222,7 +222,7 @@ export function getComments(): CommentType[] {
       isAgainstManners: true,
     },
     {
-      body: "応援してます！",
+      body: "おうえんしてます！",
       author: "GameDevPro101",
       iconUrl: "./img/scratch_manner_course_icon_50px.png",
       explanationPage: "",
