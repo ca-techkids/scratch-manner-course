@@ -18,8 +18,6 @@ function CommentToWork(props: CommentTypeWithAction) {
   let reportButtonClass = "report-button";
   if (!reportButtonVisible) reportButtonClass += " hidden";
 
-  let dateString = new Date().getDate() - props.comment.date.getDate() + "日前";
-
   let reportButton;
   if (alreadyAnswered) {
     reportButton = (
@@ -74,7 +72,7 @@ function CommentToWork(props: CommentTypeWithAction) {
           </div>
           <div className="comment-bubble">
             <p className="comment-body">{props.comment.body}</p>
-            <p className="comment-date">{dateString}</p>
+            <p className="comment-date">{props.comment.dateString}</p>
           </div>
         </div>
       </div>

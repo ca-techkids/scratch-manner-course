@@ -48,7 +48,7 @@ export function LowerContent() {
             console.log("prepared show total result.");
           }
         }}
-        key={c.date.getTime()}
+        key={c.body}
       />
     );
   });
