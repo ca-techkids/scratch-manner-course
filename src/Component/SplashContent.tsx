@@ -13,7 +13,10 @@ function SplashContent() {
           <div className="splash-window flex-column center">
             <p>不適切なコメントを見つけて、報告しよう！</p>
             <p>お手つきは3回まで！</p>
-            <img src="./img/report_tutorial.gif" alt="リテラシー講座の進め方" ></img>
+            <img
+              src="./img/report_tutorial.gif"
+              alt="リテラシー講座の進め方"
+            ></img>
             <p>ヒント: 不適切なコメントは {targetCount} 個あるよ！</p>
             <button onClick={() => setShow(false)} className="close-button">
               とじる
