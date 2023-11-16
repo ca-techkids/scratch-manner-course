@@ -21,7 +21,7 @@ function UpperContent() {
                 </div>
                 <div className="description-block">
                   <p>
-                    下のコメント一覧から、不適切なコメントを探して報告しよう！
+                    下のコメント一覧から、良くないコメントを探して報告しよう！
                   </p>
                 </div>
               </div>
