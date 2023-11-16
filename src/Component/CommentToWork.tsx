@@ -65,7 +65,7 @@ function CommentToWork(props: CommentTypeWithAction) {
         onMouseLeave={() => setButtonVisiblity(false)}
       >
         <div className="comment-left icon">
-          <img src={props.comment.iconUrl}></img>
+          <img src={props.comment.iconUrl} alt="ユーザーのアイコン" />
         </div>
         <div className="comment-right">
           <div className="comment-header">

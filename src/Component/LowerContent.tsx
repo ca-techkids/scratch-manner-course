@@ -15,6 +15,9 @@ export function LowerContent() {
   const [isShowTotalResult, setShowTotalResult] = useState(false);
   const [isShowRetry, setShowRetry] = useState(false);
 
+  const comments = resource.getComments();
+  const targetCount = resource.countTarget(comments);
+
   useEffect(() => {
     if (correctCount === targetCount) {
       setAnsweredAllTarget(true);
@@ -23,10 +26,8 @@ export function LowerContent() {
     if (wrongCount === 3) {
       setShowRetry(true);
     }
-  }, [correctCount, wrongCount]);
+  }, [correctCount, wrongCount, targetCount]);
 
-  const comments = resource.getComments();
-  const targetCount = resource.countTarget(comments);
   const commentAsList = comments.map((c) => {
     return (
       <CommentToWork
