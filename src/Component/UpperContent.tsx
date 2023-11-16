@@ -12,7 +12,7 @@ function UpperContent() {
           </div>
           <div className="center">
             <div className="game-window">
-              <img src="./img/game_window.png" />
+              <img src="./img/game_window.png" alt="ダミーのゲーム画面" />
             </div>
             <div className="game-note-container">
               <div className="game-note">

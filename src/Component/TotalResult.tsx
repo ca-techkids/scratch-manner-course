@@ -15,7 +15,7 @@ export function TotalResult(props: TotalResultType) {
         <div className="access-password">
           <p>このパスワードを使って、教科書に <a href="https://learning.techkidsschool.jp/#/materials" target="_blank">アクセス</a> しよう！</p>
           <p className="bold">「あ！ねこ」</p>
-          <img src="img/access_polta.gif" />
+          <img src="img/access_polta.gif" alt="教科書へアクセスするgif画像" />
           </div>
       </div>
     </div>

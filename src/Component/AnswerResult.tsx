@@ -26,7 +26,7 @@ export function AnswerResult(props: AnswerResultType) {
         <p className="result-hint">
           メンターさんと話せたら「とじる」ボタンをクリックしよう
         </p>
-        <img src="./img/slide_result_1.png" className="slide" />
+        <img src="./img/slide_result_1.png" alt="このコメントの悪いところをメンターさんと話し合ってみよう" className="slide" />
         <button
           onClick={() => {
             props.closeHandler();
