@@ -24,7 +24,7 @@ export function TotalResult(props: TotalResultType) {
             </a>{" "}
             しよう！
           </p>
-          <p className="bold">「あ！ねこ」</p>
+          <p className="bold">「ねこ」</p>
           <img src="img/access_polta.gif" alt="教科書へアクセスするgif画像" />
         </div>
       </div>
