@@ -1,4 +1,7 @@
 import Iframe from "react-iframe";
+import { ExplanationFriendImpersonation } from "./ExplanationFriendImpersonation";
+import { ExplanationLineExchange } from "./ExplanationLineExchange";
+import { ExplanationMeetingRequest } from "./ExplanationMeetingRequest";
 
 export type AnswerResultType = {
   explanationPageUrl: string;
@@ -40,6 +43,63 @@ export function AnswerResult(props: AnswerResultType) {
         >
           とじる
         </button>
+      </div>
+    );
+  } else if (
+    props.explanationPageUrl === "internal:line_exchange" &&
+    props.isAgainstManners
+  ) {
+    result = (
+      <div className="modal-window-result flex-column center">
+        <p className="result-text">正解！</p>
+        <p className="result-hint">あと {props.remainNumber} 個！</p>
+        <p className="result-hint">
+          解説を見てみよう！終わったら「とじる」ボタンをクリックしよう
+        </p>
+        <ExplanationLineExchange
+          closeHandler={() => {
+            props.closeHandler();
+            props.setShowAnswer(false);
+          }}
+        />
+      </div>
+    );
+  } else if (
+    props.explanationPageUrl === "internal:meeting_request" &&
+    props.isAgainstManners
+  ) {
+    result = (
+      <div className="modal-window-result flex-column center">
+        <p className="result-text">正解！</p>
+        <p className="result-hint">あと {props.remainNumber} 個！</p>
+        <p className="result-hint">
+          解説を見てみよう！終わったら「とじる」ボタンをクリックしよう
+        </p>
+        <ExplanationMeetingRequest
+          closeHandler={() => {
+            props.closeHandler();
+            props.setShowAnswer(false);
+          }}
+        />
+      </div>
+    );
+  } else if (
+    props.explanationPageUrl === "internal:friend_impersonation" &&
+    props.isAgainstManners
+  ) {
+    result = (
+      <div className="modal-window-result flex-column center">
+        <p className="result-text">正解！</p>
+        <p className="result-hint">あと {props.remainNumber} 個！</p>
+        <p className="result-hint">
+          解説を見てみよう！終わったら「とじる」ボタンをクリックしよう
+        </p>
+        <ExplanationFriendImpersonation
+          closeHandler={() => {
+            props.closeHandler();
+            props.setShowAnswer(false);
+          }}
+        />
       </div>
     );
   } else if (props.isAgainstManners) {
