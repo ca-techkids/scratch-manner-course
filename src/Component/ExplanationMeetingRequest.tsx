@@ -6,7 +6,7 @@ type Props = {
 export function ExplanationMeetingRequest(props: Props) {
     return (
         <div className="splash-window flex-column" style={{ height: "100%", width: "100%", justifyContent: "start", overflowY: "auto", alignItems: "center" }}>
-            <p>ネットでは、本当に同い年かどうかわかりません。<br></br>
+            <p>ネットでは、その人の年れいも、性別も、名前も、本当かどうかわかりません。<br></br>
                 <span style={{ color: "red", fontWeight: "bold" }}>「会おう」と言われても、ぜったいに約束してはいけません。</span><br></br>
                 すぐに大人に相談します。</p>
 
